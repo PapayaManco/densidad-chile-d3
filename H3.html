@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Comunas de Chile</title>
+<script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style></style>
+</head>
+<button id="reset">Reset</button>
+<body>
+    <div id="container" class="svg-container"></div>
+        <script type="text/javascript" src='mapa.js' charset='utf-8'></script>
+        <h2>Atributo elegido para representar en el colormap del mapa coropletico.</h2>
+        <p> Utilicé la cantidad de personas que hay en cada comuna, ya que este tipo de mapa se suele utilizar para densidad poblacional, utilicé una gama de colores que 
+            va desde el amarillo, luego pasa al naranjo y termina en café, ya que están dentro de una misma escala de colores donde lo mas café es la mayor cantidad de personas
+            tal como muestra la leyenda!. Utilicé este colormap, ya que es lo que uno suele encontrarse en estos mapas de densidad.
+        <h2>Proyección cartográfica utilizada</h2>
+        <p>Utilicé la proyección de Mercator, pues es la que estamos acostumbrados a ver desde las aplicaciones del móvil, al ser
+            una superficie plana es más fácil identificar el terreno donde se encuentra cada comuna.
+        </p>
+        <h2>Forma de realizar el zoom y pan.</h2>
+        <p>Con la rueda uno se acerca o se aleja, y arrastrando con click del mouse uno se mueve a través del mapa, para ser reiniciado con el boton de "Reset". Quizas parezca que uno se puede ir muy a la izquierda, pero es para mostrar
+            a Rapa Nui!.
+        </p>
+        <h2>Idiom para la selección de comunas.</h2>
+        <p> Para la selección de comunas hice que se le bajara la opacidad a la comuna en cuestión, asi es fácil de ver las comunas seleccionadas.
+            Y para cuando se des-seleccionan, vuelven a su opacidad normal.
+        <h2>Idiom de segunda vista</h2>
+        <p> Utilicé un grafico de barras para representar la cantidad de hombres y mujeres de cada comuna, una vez seleccionada ésta, se muestran al pie del mapa dos barras una azul y una rosada, para la cantidad de poblacion de hombres y mujeres respectivamente, estas están normalizadas con respecto a la categoria más densa, las mujeres de Puente Alto.Así la altura de las
+            barras es proporcional a la densidad poblacional por sexo de cada comuna. </p>
+        <h2>Organización espacial de vistas </h2>
+        <p> Dejé el mapa centrado en la pagina, ya que es lo que se va a interactuar y es la información principal, abajo deje el segundo idiom, ya que es la información
+            de vista coordinada y no le quita espacio al mapa.  </p>
+        <h2>Notas sobre el Hito</h2>
+        <p> Hay un error al seleccionar y des-seleccionar comunas con la segunda vista, por como lo definí se sobreponen si uno no des-selecciona la ultima comuna
+            seleccionada. :( </p>
+</body>
+</html>
